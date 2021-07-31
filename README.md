@@ -1,6 +1,7 @@
 ## cache invalidator
 
-Invalidate cache (Cloud front) when stage or prod upgrade occurs - Perfect for GitOps type setup of CI/CD.
+Invalidate cache when stage or prod upgrade occurs in a K8S cluster - Perfect for GitOps type setup of CI/CD.
+Currently only AWS Cloud Front is supprted.
 
 ## Info
 
