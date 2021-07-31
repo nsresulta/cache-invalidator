@@ -1,10 +1,10 @@
 ## cache invalidator
 
-Invalidate cache (Cloud front) when stage or prod upgrade occurs
+Invalidate cache (Cloud front) when stage or prod upgrade occurs - Perfect for GitOps type setup of CI/CD.
 
 ## Info
 
-This worker will continuously go over all the deployments in a give namespace and will cache all the current tags.
+This worker will continuously go over all the deployments in a given namespace and will cache all the current tags.
 If a tag changes, i.e. upgrade occured, the worker will get the site domain from the ingress object,find the corresponding CF distribution and will invalidate it.
 The invalidation will only happen once the new deployment rolled out succesfully otherwise the worker will wait for all the pods to be in a running state. 
 Waiting for pods is a non blocking operation as goroutines are used, i.e. each invalidation is happening concurrently.
