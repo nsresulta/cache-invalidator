@@ -1,0 +1,11 @@
+{
+    "webhooks": [
+        {
+            "name": "podinfo",
+            "url": "https://webhook.com/",
+            "method": "POST",
+            "headers": {},
+            "parameters": {}            
+        }        
+    ]
+}
